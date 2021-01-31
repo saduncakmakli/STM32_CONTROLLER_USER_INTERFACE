@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{513C59CF-B0DD-4242-B66A-3FE547C04935}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Design_Project</RootNamespace>
-    <AssemblyName>Design Project</AssemblyName>
+    <RootNamespace>STM32_STEP_CONTROLLER_USER_INTERFACE</RootNamespace>
+    <AssemblyName>STM32 STEP CONTROLLER USER INTERFACE</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,14 +49,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Controller.cs" />
+    <Compile Include="enums.cs" />
+    <Compile Include="ModeSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ModeSelect.Designer.cs">
+      <DependentUpon>ModeSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectPortProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPortProperties.Designer.cs">
+      <DependentUpon>SelectPortProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Static.cs" />
+    <Compile Include="Uart.cs" />
+    <EmbeddedResource Include="ModeSelect.resx">
+      <DependentUpon>ModeSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +78,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SelectPortProperties.resx">
+      <DependentUpon>SelectPortProperties.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +95,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anticlockwise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stopbutton_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stopbutton_passive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playbutton_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playbutton_passive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clockwise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pulse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tetiklemeli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manuel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinirli_aci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tetiklemeli_sinirli_aci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tek_yonlu_tetiklemeli_sinirli_aci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kalibrasyon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

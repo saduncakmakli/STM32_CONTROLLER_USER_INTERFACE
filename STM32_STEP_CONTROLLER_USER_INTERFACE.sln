@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1169
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design Project", "Design Project\Design Project.csproj", "{513C59CF-B0DD-4242-B66A-3FE547C04935}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STM32_STEP_CONTROLLER_USER_INTERFACE", "STM32_STEP_CONTROLLER_USER_INTERFACE\STM32_STEP_CONTROLLER_USER_INTERFACE.csproj", "{513C59CF-B0DD-4242-B66A-3FE547C04935}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
